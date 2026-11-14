@@ -22,6 +22,10 @@
     article h3 { margin-bottom: .5rem; }
     ul { padding-left: 1.25rem; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .brand { white-space: nowrap; }
+    .brand img { display: inline-block; box-sizing: content-box; padding: 2px; border-radius: 4px; background: #f1f6f4; vertical-align: -.3em; }
+    .employer-logo { display: block; width: 100px; height: auto; margin: 0 0 .75rem; border-radius: .4rem; background: #f1f6f4; }
+    .credits { font-size: .8rem; }
     nav { display: flex; flex-wrap: wrap; gap: .65rem 1.35rem; }
     .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; padding: 0; list-style: none; }
     .metrics li { background: #192727; border: 1px solid #38514b; border-radius: .75rem; padding: .9rem 1rem; }
@@ -34,28 +38,28 @@
     <header>
       <h1>Minalan A S</h1>
       <p class="role">DevOps &amp; Cloud Engineer</p>
-      <p>I build multi-account AWS environments, automate releases, and improve reliability across Linux, Windows, and Kubernetes workloads. I’m based in Bengaluru and have 4+ years of DevOps experience.</p>
+      <p>I build multi-account <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="16" height="16"> AWS</span> environments, automate releases, and improve reliability across <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linux/linux-original.svg" alt="" width="16" height="16"> Linux</span>, <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/windows11/windows11-original.svg" alt="" width="16" height="16"> Windows</span>, and <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/kubernetes/kubernetes-original.svg" alt="" width="16" height="16"> Kubernetes</span> workloads. I’m based in Bengaluru and have 4+ years of DevOps experience.</p>
       <nav aria-label="Portfolio links">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="https://github.com/minalan79">GitHub</a>
-        <a href="https://www.linkedin.com/in/minalan-a-s/">LinkedIn</a>
+        <a href="https://github.com/minalan79"><span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/github/github-original.svg" alt="" width="16" height="16"> GitHub</span></a>
+        <a href="https://www.linkedin.com/in/minalan-a-s/"><span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linkedin/linkedin-original.svg" alt="" width="16" height="16"> LinkedIn</span></a>
       </nav>
     </header>
     <section aria-labelledby="impact">
       <h2 id="impact">Impact at Microland</h2>
       <ul class="metrics">
-        <li><strong>10+ accounts</strong>AWS environments built and secured</li>
+        <li><strong>10+ accounts</strong><span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="16" height="16"> AWS</span> environments built and secured</li>
         <li><strong>2 days <span aria-hidden="true">→</span><span class="sr-only"> to </span> 4 hours</strong>Deployment time with CI/CD</li>
         <li><strong>250+ instances</strong>Covered by dashboards and alerts</li>
-        <li><strong>140+ instances</strong>RHEL and Windows EC2 upgrades</li>
+        <li><strong>140+ instances</strong><span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/redhat/redhat-original.svg" alt="" width="16" height="16"> RHEL</span> and <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/windows11/windows11-original.svg" alt="" width="16" height="16"> Windows</span> EC2 upgrades</li>
       </ul>
     </section>
     <section aria-labelledby="projects">
       <h2 id="projects">Featured projects</h2>
       <article>
         <h3><a href="https://github.com/minalan79/Kronos">Kronos</a></h3>
-        <p>An Azure deployment project that uses Terraform to configure AKS and Azure Pipelines to build and deploy a containerized Flask app. The Kubernetes deployment defines health probes and resource requests and limits.</p>
+        <p>An <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/azure/azure-original.svg" alt="" width="16" height="16"> Azure</span> deployment project that uses <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/terraform/terraform-original.svg" alt="" width="16" height="16"> Terraform</span> to configure AKS and <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/azuredevops/azuredevops-original.svg" alt="" width="16" height="16"> Azure Pipelines</span> to build and deploy a containerized <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/flask/flask-original.svg" alt="" width="16" height="16"> Flask</span> app. The <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/kubernetes/kubernetes-original.svg" alt="" width="16" height="16"> Kubernetes</span> deployment defines health probes and resource requests and limits.</p>
         <ul>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/terraform/azure/cluster.tf">Terraform cluster definition</a></li>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/azure-pipelines.yml">Azure Pipelines workflow</a></li>
@@ -64,7 +68,7 @@
       </article>
       <article>
         <h3><a href="https://github.com/minalan79/k8s-config-validator">Kubernetes Config Validator</a></h3>
-        <p>A Go CLI that validates Kubernetes YAML against version-specific schemas. It accepts files, directories, and stdin, and exits nonzero on validation failures so it can run as a CI check.</p>
+        <p>A <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/go/go-original-wordmark.svg" alt="" width="16" height="16"> Go</span> CLI that validates Kubernetes YAML against version-specific schemas. It accepts files, directories, and stdin, and exits nonzero on validation failures so it can run as a CI check.</p>
         <ul>
           <li><a href="https://github.com/minalan79/k8s-config-validator#usage">Usage examples</a></li>
           <li><a href="https://github.com/minalan79/k8s-config-validator/blob/master/example-manifests/test-invalid.yml">Invalid manifest fixture</a></li>
@@ -74,13 +78,14 @@
     <section aria-labelledby="experience">
       <h2 id="experience">Professional experience</h2>
       <article>
+        <img class="employer-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/The_New_Microland_Logo_in_2024.png" alt="" width="933" height="442" loading="lazy">
         <h3>Microland Limited</h3>
         <p class="meta">DevOps engineering · Bengaluru · June 2022–present</p>
         <ul>
-          <li><strong>Cloud infrastructure.</strong> Provisioned networking, compute, and storage across AWS accounts with Terraform and CloudFormation. Automated cross-account inventory reporting with Python, Bash, and Lambda, reducing execution time from one day to 10 seconds.</li>
-          <li><strong>Release engineering.</strong> Automated releases with Jenkins and GitHub Actions and worked on containerized workloads with EKS, ECS, Docker, and ECR.</li>
-          <li><strong>Reliability.</strong> Built Grafana and CloudWatch dashboards and alerts for 20+ production services. Used blue-green deployment and rollback strategies during EC2 OS upgrades while maintaining 99.9%+ uptime across those services.</li>
-          <li><strong>Image and patch automation.</strong> Maintained Packer pipelines for CIS-hardened golden AMIs and achieved 95%+ patch compliance with Qualys and AWS Systems Manager Patch Manager.</li>
+          <li><strong>Cloud infrastructure.</strong> Provisioned networking, compute, and storage across <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="16" height="16"> AWS</span> accounts with <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/terraform/terraform-original.svg" alt="" width="16" height="16"> Terraform</span> and CloudFormation. Automated cross-account inventory reporting with <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/python/python-original.svg" alt="" width="16" height="16"> Python</span>, <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/bash/bash-original.svg" alt="" width="16" height="16"> Bash</span>, and Lambda, reducing execution time from one day to 10 seconds.</li>
+          <li><strong>Release engineering.</strong> Automated releases with <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/jenkins/jenkins-original.svg" alt="" width="16" height="16"> Jenkins</span> and <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/githubactions/githubactions-original.svg" alt="" width="16" height="16"> GitHub Actions</span> and worked on containerized workloads with EKS, ECS, <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/docker/docker-original.svg" alt="" width="16" height="16"> Docker</span>, and ECR.</li>
+          <li><strong>Reliability.</strong> Built <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/grafana/grafana-original.svg" alt="" width="16" height="16"> Grafana</span> and CloudWatch dashboards and alerts for 20+ production services. Used blue-green deployment and rollback strategies during EC2 OS upgrades while maintaining 99.9%+ uptime across those services.</li>
+          <li><strong>Image and patch automation.</strong> Maintained <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/packer/packer-original.svg" alt="" width="16" height="16"> Packer</span> pipelines for CIS-hardened golden AMIs and achieved 95%+ patch compliance with Qualys and AWS Systems Manager Patch Manager.</li>
         </ul>
         <p>Internal recognition · Innovative Hat (2025) and Tech Wizard (2024)</p>
       </article>
@@ -89,9 +94,12 @@
       <h2 id="credentials">Education &amp; certification</h2>
       <ul>
         <li>Bachelor of Technology · National Institute of Technology, Trichy · 2022</li>
-        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+        <li>Microsoft Certified: <span class="brand"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/azure/azure-original.svg" alt="" width="16" height="16"> Azure</span> Fundamentals (AZ-900)</li>
       </ul>
     </section>
+    <footer class="credits">
+      <a href="https://github.com/devicons/devicon">Technology logos by Devicon</a> · <a href="https://commons.wikimedia.org/wiki/File:The_New_Microland_Logo_in_2024.png">Microland logo by Spiritofml</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)
+    </footer>
   </main>
 </body>
 </html>
