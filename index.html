@@ -19,6 +19,10 @@
     article { border-top: 1px solid #38514b; padding: 1rem 0; }
     article h3 { margin-bottom: .5rem; }
     ul { padding-left: 1.25rem; }
+    nav { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; }
+    article { padding: 1.25rem; margin: 1rem 0; border: 1px solid #38514b; border-radius: .75rem; background: #192727; }
+    article h3 { margin-top: 0; }
+    article ul { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -27,13 +31,17 @@
       <h1>Minalan A S</h1>
       <p class="role">DevOps &amp; Cloud Engineer</p>
       <p>I build and automate cloud infrastructure, delivery pipelines, and system operations across multi-account AWS environments and Linux and Windows fleets.</p>
-      <a href="https://github.com/minalan79">GitHub profile</a>
+      <nav aria-label="Portfolio links">
+        <a href="#projects">Projects</a>
+        <a href="#focus">Professional focus</a>
+        <a href="https://github.com/minalan79">GitHub profile</a>
+      </nav>
     </header>
     <section aria-labelledby="projects">
       <h2 id="projects">Featured projects</h2>
       <article>
         <h3><a href="https://github.com/minalan79/Kronos">Kronos</a></h3>
-        <p>An Azure deployment project that uses Terraform to configure AKS and Azure Pipelines to build and deploy a containerized Flask app. The Kubernetes deployment defines health probes and resource requests and limits.</p>
+        <p>An end-to-end example of shipping a containerized Flask app to AKS. Follow the Terraform cluster configuration, Azure Pipelines build and deploy stages, and Kubernetes health probes and resource settings.</p>
         <ul>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/terraform/azure/cluster.tf">Terraform cluster definition</a></li>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/azure-pipelines.yml">Azure Pipelines workflow</a></li>
