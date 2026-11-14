@@ -1,13 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minalan A S, DevOps and cloud engineer. Selected work in Terraform, Kubernetes, CI/CD, and AWS operations.">
+  <title>Minalan A S | DevOps &amp; Cloud Engineering</title>
+  <style>
+    :root { color-scheme: dark; background: #101819; color: #edf6f3; font: 16px/1.65 "Inter", system-ui, sans-serif; }
+    body { margin: 0; }
+    main { max-width: 48rem; margin: auto; padding: clamp(2rem, 8vw, 6rem) 1.5rem; }
+    header, section { margin-bottom: 2.5rem; }
+    h1 { font-size: clamp(2.8rem, 8vw, 5rem); line-height: 1.05; margin: 0; letter-spacing: -.06em; }
+    h2, h3 { line-height: 1.25; }
+    p, li { color: #c1d2cd; }
+    a { color: #a1f1ca; text-underline-offset: .25em; }
+    a:focus-visible { outline: 2px solid #a1f1ca; outline-offset: 4px; }
+    .role { color: #a1f1ca; font-weight: 650; }
+    article { border-top: 1px solid #38514b; padding: 1rem 0; }
+    article h3 { margin-bottom: .5rem; }
+    ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Minalan A S</h1>
+      <p class="role">DevOps &amp; Cloud Engineer</p>
+      <p>I build and automate cloud infrastructure, delivery pipelines, and system operations across multi-account AWS environments and Linux and Windows fleets.</p>
+      <a href="https://github.com/minalan79">GitHub profile</a>
+    </header>
+    <section aria-labelledby="projects">
+      <h2 id="projects">Featured projects</h2>
+      <article>
+        <h3><a href="https://github.com/minalan79/Kronos">Kronos</a></h3>
+        <p>An Azure deployment project that uses Terraform to configure AKS and Azure Pipelines to build and deploy a containerized Flask app. The Kubernetes deployment defines health probes and resource requests and limits.</p>
+        <ul>
+          <li><a href="https://github.com/minalan79/Kronos/blob/main/terraform/azure/cluster.tf">Terraform cluster definition</a></li>
+          <li><a href="https://github.com/minalan79/Kronos/blob/main/azure-pipelines.yml">Azure Pipelines workflow</a></li>
+          <li><a href="https://github.com/minalan79/Kronos/blob/main/k8s/deployment.yaml">Kubernetes deployment manifest</a></li>
+        </ul>
+      </article>
+      <article>
+        <h3><a href="https://github.com/minalan79/k8s-config-validator">Kubernetes Config Validator</a></h3>
+        <p>A Go CLI that validates Kubernetes YAML against version-specific schemas. It accepts files, directories, and stdin, and exits nonzero on validation failures so it can run as a CI check.</p>
+        <ul>
+          <li><a href="https://github.com/minalan79/k8s-config-validator#usage">Usage examples</a></li>
+          <li><a href="https://github.com/minalan79/k8s-config-validator/blob/master/example-manifests/test-invalid.yml">Invalid manifest fixture</a></li>
+        </ul>
+      </article>
+    </section>
+    <section aria-labelledby="focus">
+      <h2 id="focus">Professional focus</h2>
+      <ul>
+        <li>AWS infrastructure and governance with Terraform, IAM, KMS, and CI/CD</li>
+        <li>RHEL and Windows golden AMIs with Packer, Systems Manager, and Ansible</li>
+        <li>Observability with CloudWatch, Prometheus, and Grafana</li>
+      </ul>
+    </section>
+  </main>
+</body>
 </html>
