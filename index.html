@@ -8,7 +8,7 @@
   <style>
     :root { color-scheme: dark; background: #101819; color: #edf6f3; font: 16px/1.65 "Inter", system-ui, sans-serif; }
     body { margin: 0; }
-    main { max-width: 48rem; margin: auto; padding: clamp(2rem, 8vw, 6rem) 1.5rem; }
+    main { max-width: 60rem; margin: auto; padding: clamp(2rem, 8vw, 6rem) 1.5rem; }
     header, section { margin-bottom: 2.5rem; }
     h1 { font-size: clamp(2.8rem, 8vw, 5rem); line-height: 1.05; margin: 0; letter-spacing: -.06em; }
     h2, h3 { line-height: 1.25; }
@@ -16,13 +16,15 @@
     a { color: #a1f1ca; text-underline-offset: .25em; }
     a:focus-visible { outline: 2px solid #a1f1ca; outline-offset: 4px; }
     .role { color: #a1f1ca; font-weight: 650; }
-    article { border-top: 1px solid #38514b; padding: 1rem 0; }
-    article h3 { margin-bottom: .5rem; }
-    ul { padding-left: 1.25rem; }
-    nav { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; }
     article { padding: 1.25rem; margin: 1rem 0; border: 1px solid #38514b; border-radius: .75rem; background: #192727; }
     article h3 { margin-top: 0; }
-    article ul { margin-bottom: 0; }
+    article h3 { margin-bottom: .5rem; }
+    ul { padding-left: 1.25rem; }
+    nav { display: flex; flex-wrap: wrap; gap: .65rem 1.35rem; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; padding: 0; list-style: none; }
+    .metrics li { background: #192727; border: 1px solid #38514b; border-radius: .75rem; padding: .9rem 1rem; }
+    .metrics strong { display: block; color: #edf6f3; font-size: 1.5rem; line-height: 1.3; }
+    .meta { margin-top: -.25rem; }
   </style>
 </head>
 <body>
@@ -30,18 +32,28 @@
     <header>
       <h1>Minalan A S</h1>
       <p class="role">DevOps &amp; Cloud Engineer</p>
-      <p>I build and automate cloud infrastructure, delivery pipelines, and system operations across multi-account AWS environments and Linux and Windows fleets.</p>
+      <p>I build multi-account AWS environments, automate releases, and improve reliability across Linux, Windows, and Kubernetes workloads. I’m based in Bengaluru and have 4+ years of DevOps experience.</p>
       <nav aria-label="Portfolio links">
         <a href="#projects">Projects</a>
-        <a href="#focus">Professional focus</a>
-        <a href="https://github.com/minalan79">GitHub profile</a>
+        <a href="#experience">Experience</a>
+        <a href="https://github.com/minalan79">GitHub</a>
+        <a href="https://www.linkedin.com/in/minalan-a-s/">LinkedIn</a>
       </nav>
     </header>
+    <section aria-labelledby="impact">
+      <h2 id="impact">Impact at Microland</h2>
+      <ul class="metrics">
+        <li><strong>10+ accounts</strong>AWS environments built and secured</li>
+        <li><strong>2 days to 4 hours</strong>Deployment time after CI/CD automation</li>
+        <li><strong>250+ instances</strong>Covered by dashboards and alerts</li>
+        <li><strong>140+ instances</strong>RHEL and Windows EC2 upgrades</li>
+      </ul>
+    </section>
     <section aria-labelledby="projects">
       <h2 id="projects">Featured projects</h2>
       <article>
         <h3><a href="https://github.com/minalan79/Kronos">Kronos</a></h3>
-        <p>An end-to-end example of shipping a containerized Flask app to AKS. Follow the Terraform cluster configuration, Azure Pipelines build and deploy stages, and Kubernetes health probes and resource settings.</p>
+        <p>An Azure deployment project that uses Terraform to configure AKS and Azure Pipelines to build and deploy a containerized Flask app. The Kubernetes deployment defines health probes and resource requests and limits.</p>
         <ul>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/terraform/azure/cluster.tf">Terraform cluster definition</a></li>
           <li><a href="https://github.com/minalan79/Kronos/blob/main/azure-pipelines.yml">Azure Pipelines workflow</a></li>
@@ -57,12 +69,25 @@
         </ul>
       </article>
     </section>
-    <section aria-labelledby="focus">
-      <h2 id="focus">Professional focus</h2>
+    <section aria-labelledby="experience">
+      <h2 id="experience">Professional experience</h2>
+      <article>
+        <h3>Microland Limited</h3>
+        <p class="meta">DevOps engineering · Bengaluru · June 2022–present</p>
+        <ul>
+          <li><strong>Cloud infrastructure.</strong> Provisioned networking, compute, and storage across AWS accounts with Terraform and CloudFormation. Automated cross-account inventory reporting with Python, Bash, and Lambda, reducing execution time from one day to 10 seconds.</li>
+          <li><strong>Release engineering.</strong> Automated releases with Jenkins and GitHub Actions and worked on containerized workloads with EKS, ECS, Docker, and ECR.</li>
+          <li><strong>Reliability.</strong> Built Grafana and CloudWatch dashboards and alerts for 20+ production services. Used blue-green deployment and rollback strategies during EC2 OS upgrades while maintaining 99.9%+ uptime across those services.</li>
+          <li><strong>Image and patch automation.</strong> Maintained Packer pipelines for CIS-hardened golden AMIs and achieved 95%+ patch compliance with Qualys and AWS Systems Manager Patch Manager.</li>
+        </ul>
+        <p>Internal recognition · Innovative Hat (2025) and Tech Wizard (2024)</p>
+      </article>
+    </section>
+    <section aria-labelledby="credentials">
+      <h2 id="credentials">Education and certification</h2>
       <ul>
-        <li>AWS infrastructure and governance with Terraform, IAM, KMS, and CI/CD</li>
-        <li>RHEL and Windows golden AMIs with Packer, Systems Manager, and Ansible</li>
-        <li>Observability with CloudWatch, Prometheus, and Grafana</li>
+        <li>Bachelor of Technology · National Institute of Technology, Trichy · 2022</li>
+        <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
       </ul>
     </section>
   </main>
