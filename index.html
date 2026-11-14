@@ -23,8 +23,9 @@
     ul { padding-left: 1.25rem; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
     .brand { white-space: nowrap; }
-    .brand img { display: inline-block; box-sizing: content-box; padding: 2px; border-radius: 4px; background: #f1f6f4; vertical-align: -.3em; }
-    .employer-logo { display: block; width: 100px; height: auto; margin: 0 0 .75rem; border-radius: .4rem; background: #f1f6f4; }
+    .brand img { display: inline-block; vertical-align: -.18em; }
+    .brand img[src*="/github/github-"], .brand img[src*="/flask/flask-"] { filter: brightness(0) invert(1); }
+    .employer-logo { display: block; width: 100px; height: auto; margin: 0 0 .75rem;  }
     .credits { font-size: .8rem; }
     nav { display: flex; flex-wrap: wrap; gap: .65rem 1.35rem; }
     .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; padding: 0; list-style: none; }
